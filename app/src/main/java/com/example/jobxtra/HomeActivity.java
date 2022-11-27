@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setOpenableLayout(drawer)
+                .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -52,9 +52,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed{
+    public void onBackPressed(){
         if(pressTime+2000>System.currentTimeMillis()){
-            super.OnbackPressed();
+            super.onBackPressed();
             finish();
         }
         pressTime=System.currentTimeMillis();

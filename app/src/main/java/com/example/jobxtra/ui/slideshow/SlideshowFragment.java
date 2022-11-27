@@ -44,9 +44,9 @@ public class SlideshowFragment extends Fragment {
                 loadingPB.setVisibility(view.GONE);
             }
         });
-        contactWebView.setOnClickListener(new View.OnKeyListener(){
+        contactWebView.setOnKeyListener(new View.OnKeyListener(){
             @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+            public boolean onKey(View view, int keyCode, KeyEvent event) {
                 if(event.getAction()==KeyEvent.ACTION_DOWN){
                     switch (keyCode){
                         case KeyEvent.KEYCODE_BACK:

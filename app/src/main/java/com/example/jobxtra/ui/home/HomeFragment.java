@@ -44,9 +44,9 @@ public class HomeFragment extends Fragment {
                 loadingPb.setVisibility(view.GONE);
             }
         });
-        homeWebView.setOnClickListener(new View.OnKeyListener(){
+        homeWebView.setOnKeyListener(new View.OnKeyListener(){
             @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
                 if(keyEvent.getAction()==KeyEvent.ACTION_DOWN){
                     switch (keyCode){
                         case KeyEvent.KEYCODE_BACK:

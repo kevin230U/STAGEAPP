@@ -46,9 +46,9 @@ public class GalleryFragment extends Fragment {
         });
         plusWebView.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if  (keyEvent.getAction()==KeyEvent.ACTION_DOWN){
-                    switch (Keycode){
+            public boolean onKey(View view, int keyCode, KeyEvent event) {
+                if  (event.getAction()==KeyEvent.ACTION_DOWN){
+                    switch(keyCode){
                         case KeyEvent.KEYCODE_BACK:
                             if(plusWebView.canGoBack()){
                                 plusWebView.goBack();
